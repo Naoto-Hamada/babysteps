@@ -4,4 +4,5 @@
       <img class="content_post" src="<%= article.image %>"></img>
       <p><%= article.text %></p>
     <% end %>
+    <%= paginate(@articles) %>
   </div>
