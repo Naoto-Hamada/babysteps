@@ -1,1 +1,9 @@
   <p>BSファンサイトトップページ！！</p>
+
+    <div class="contents row" >
+    <% @articles.each do |article| %>
+      <p><%= article.title %></p>
+      <img class="content_post" src="<%= article.image %>"></img>
+      <p><%= article.text %></p>
+    <% end %>
+  </div>
