@@ -8,7 +8,7 @@ end
 
 
 # ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-#                  Prefix Verb   URI Pattern                    Controller#Action
+#                   Prefix Verb   URI Pattern                    Controller#Action
 # ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 #         new_user_session GET    /users/sign_in(.:format)       devise/sessions#new
 #             user_session POST   /users/sign_in(.:format)       devise/sessions#create
@@ -29,5 +29,6 @@ end
 #              new_article GET    /articles/new(.:format)        articles#new
 #                   tweets POST   /tweets(.:format)              tweets#create
 #                new_tweet GET    /tweets/new(.:format)          tweets#new
+#                          GET    /tweets(.:format)              tweets#index
 #                     root GET    /                              articles#index
 # ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
