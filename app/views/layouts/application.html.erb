@@ -35,7 +35,15 @@
           <a class="post" href="/articles/new">イラストギャラリー</a>
         <% if user_signed_in? %>
           <div class="user_nav grid-6">
-            <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+            <span><%= current_user.nickname %>
+              <ul class="user__info">
+                <li>
+                  <a href="/users/<%= current_user.id %>">your baby-steps</a>
+                  <a href="/users/<%= current_user.id %>">マイページ</a>
+                  <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+                </li>
+              </ul>
+            </span>
             <a class="post" href="/articles/new">記事を投稿する</a>
             <a class="post" href="/tweets/new">達成POSTを投稿する</a>
           </div>
