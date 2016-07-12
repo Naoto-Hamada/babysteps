@@ -3,6 +3,7 @@
       <a href="">
         <span>投稿者</span><%= tweet.user.nickname %>
       </a>
+      <%= link_to '詳細' , "/tweets/#{tweet.id}", method: :get %>
       <img class="content_post" src="<%= tweet.image %>"></img>
       <p><%= tweet.text %></p>
     <% end %>
