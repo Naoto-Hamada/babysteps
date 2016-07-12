@@ -1,1 +1,7 @@
-  <p>テスト</p>
+  <div class="contents row" >
+    <% @tweets.each do |tweet| %>
+      <img class="content_post" src="<%= tweet.image %>"></img>
+      <p><%= tweet.text %></p>
+    <% end %>
+    <%= paginate(@tweets) %>
+  </div>
