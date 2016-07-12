@@ -1,9 +1,7 @@
   <div class="contents row" >
     <% @tweets.each do |tweet| %>
     <% if user_signed_in? && current_user.id == tweet.user_id %>
-        <p class="more">
-          <%= link_to '削除', "/tweets/#{tweet.id}", method: :delete %>
-        </p>
+      <p><%= link_to '削除', "/tweets/#{tweet.id}", method: :delete %></p>
       <a href="">
         <span>投稿者</span><%= tweet.user.nickname %>
       </a>
