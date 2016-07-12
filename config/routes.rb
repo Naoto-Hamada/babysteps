@@ -1,8 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   resources :articles, only: [:new, :create]
-  resources :tweets,   only: [:new, :create]
-  get 'tweets' => 'tweets#index'
+  resources :tweets
   root 'articles#index'
   get 'info' => 'top#info'
   get 'profile' => 'top#profile'
