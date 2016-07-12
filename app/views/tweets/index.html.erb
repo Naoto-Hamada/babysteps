@@ -1,11 +1,6 @@
   <div class="contents row" >
     <% @tweets.each do |tweet| %>
-      <a href="">
-        <span>投稿者</span><%= tweet.user.nickname %>
-      </a>
-      <%= link_to '詳細' , "/tweets/#{tweet.id}", method: :get %>
-      <img class="content_post" src="<%= tweet.image %>"></img>
-      <p><%= tweet.text %></p>
+      <%= render partial: "tweet", locals: { tweet: tweet } %>
     <% end %>
     <%= paginate(@tweets) %>
   </div>
