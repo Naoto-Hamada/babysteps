@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   root 'articles#index'
   get 'info' => 'top#info'
   get 'profile' => 'top#profile'
+  get   'users/:id'   =>  'users#show'
 end
 
 
