@@ -1,13 +1,11 @@
   <div class="contents row" >
     <% @tweets.each do |tweet| %>
-    <% if user_signed_in? && current_user.id == tweet.user_id %>
-      <p><%= link_to '削除', "/tweets/#{tweet.id}", method: :delete %></p>
       <a href="">
         <span>投稿者</span><%= tweet.user.nickname %>
       </a>
       <img class="content_post" src="<%= tweet.image %>"></img>
       <p><%= tweet.text %></p>
     <% end %>
-    <% end %>
     <%= paginate(@tweets) %>
   </div>
+

@@ -1,8 +1,20 @@
   <div class="contents row" >
     <p><%= @nickname %>さんのこれまでのベイビーステップ</p>
     <% @tweets.each do |tweet| %>
-      <img class="content_post" src="<%= tweet.image %>"></img>
-      <p><%= tweet.text %></p>
+      <% if user_signed_in? && current_user.id == tweet.user_id %>
+            <div>
+              <ul class="more_list">
+                <li>
+                  <%= link_to '編集', "/tweets/#{tweet.id}/edit", method: :get %>
+                </li>
+                <li>
+                  <%= link_to '削除', "/tweets/#{tweet.id}", method: :delete %>
+                </li>
+              </ul>
+            </div>
+          <img class="content_post" src="<%= tweet.image %>"></img>
+          <p><%= tweet.text %></p>
+      <% end %>
     <% end %>
     <%= paginate(@tweets) %>
   </div>

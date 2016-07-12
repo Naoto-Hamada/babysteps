@@ -10,7 +10,7 @@ end
 
 
 # ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
-#                   Prefix Verb   URI Pattern                    Controller#Action
+                  # Prefix Verb   URI Pattern                    Controller#Action
 # ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
 #         new_user_session GET    /users/sign_in(.:format)       devise/sessions#new
 #             user_session POST   /users/sign_in(.:format)       devise/sessions#create
@@ -29,8 +29,16 @@ end
 #                          DELETE /users(.:format)               devise/registrations#destroy
 #                 articles POST   /articles(.:format)            articles#create
 #              new_article GET    /articles/new(.:format)        articles#new
-#                   tweets POST   /tweets(.:format)              tweets#create
+#                   tweets GET    /tweets(.:format)              tweets#index
+#                          POST   /tweets(.:format)              tweets#create
 #                new_tweet GET    /tweets/new(.:format)          tweets#new
-#                          GET    /tweets(.:format)              tweets#index
+#               edit_tweet GET    /tweets/:id/edit(.:format)     tweets#edit
+#                    tweet GET    /tweets/:id(.:format)          tweets#show
+#                          PATCH  /tweets/:id(.:format)          tweets#update
+#                          PUT    /tweets/:id(.:format)          tweets#update
+#                          DELETE /tweets/:id(.:format)          tweets#destroy
 #                     root GET    /                              articles#index
+#                     info GET    /info(.:format)                top#info
+#                  profile GET    /profile(.:format)             top#profile
+#                          GET    /users/:id(.:format)           users#show
 # ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
