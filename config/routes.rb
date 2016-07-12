@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   resources :tweets,   only: [:new, :create]
   get 'tweets' => 'tweets#index'
   root 'articles#index'
+  get 'info' => 'top#info'
+  get 'profile' => 'top#profile'
 end
 
 
