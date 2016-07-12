@@ -7,7 +7,9 @@ Rails.application.routes.draw do
   root 'articles#index'
   get 'info' => 'top#info'
   get 'profile' => 'top#profile'
-  resources :users, only: [:show]
+  resources :users, only: [:show] do
+    resources :wants, only: [:new, :create]
+  end
 end
 
 
@@ -43,5 +45,7 @@ end
 #                     root GET    /                                    articles#index
 #                     info GET    /info(.:format)                      top#info
 #                  profile GET    /profile(.:format)                   top#profile
+#               user_wants POST   /users/:user_id/wants(.:format)      wants#create
+#            new_user_want GET    /users/:user_id/wants/new(.:format)  wants#new
 #                     user GET    /users/:id(.:format)                 users#show
 # ＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
