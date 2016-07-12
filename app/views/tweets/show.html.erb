@@ -11,11 +11,11 @@
             </li>
           </ul>
         </div>
-      <img class="content_post" src="<%= @tweet.image %>"></img>
-      <p><%= @tweet.text %></p>
+        <img class="content_post" src="<%= @tweet.image %>"></img>
+        <p><%= @tweet.text %></p>
     <% else %>
-      <img class="content_post" src="<%= @tweet.image %>"></img>
-      <p><%= @tweet.text %></p>
+        <img class="content_post" src="<%= @tweet.image %>"></img>
+        <p><%= @tweet.text %></p>
     <% end %>
     <span class="name">
       <a href=""> <!-- /users/<%= @tweet.user.id %> -->
@@ -23,7 +23,7 @@
       </a>
     </span>
   </div>
-  <div class="container"> 
+  <div class="container">
     <!-- ここからフォーム -->
     <% if current_user %>
       <%= form_tag("/tweets/#{@tweet.id}/comments", method: :post) do %>
@@ -31,5 +31,17 @@
         <input type="submit" value="SENT">
       <% end %>
     <% end %>
+    <div class="comments">
+      <h4>＜コメント一覧＞</h4>
+      <% if @comments %>
+        <% @comments.each do |comment| %>
+          <p>
+            <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>：</strong>
+            <%= comment.text %>
+          </p>
+        <% end %>
+      <% end %>
+    </div>
   </div>
 </div>
+
