@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160712114453) do
+ActiveRecord::Schema.define(version: 20160712131304) do
 
   create_table "articles", force: :cascade do |t|
     t.text     "title",      limit: 65535
@@ -56,5 +56,13 @@ ActiveRecord::Schema.define(version: 20160712114453) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+
+  create_table "wants", force: :cascade do |t|
+    t.integer  "rate",       limit: 4
+    t.text     "title",      limit: 65535
+    t.text     "text",       limit: 65535
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
