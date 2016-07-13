@@ -1,3 +1,24 @@
 // Place all the styles related to the tweets controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.contents_row{
+  margin: 0 auto;
+}
+
+.success{
+  margin: 0 auto;
+  width: 400px;
+  height: 300px;
+}
+
+.content_post {
+    position: relative;
+    height: 400px;
+    width: 400px;
+    color: #fff;
+    background-size: cover;
+    background-position: center center;
+    border-radius: 3px;
+  }
