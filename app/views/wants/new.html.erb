@@ -1,3 +1,13 @@
 
 <h1>企画の説明</h1>
-
+    <div class="container">
+      <%= form_tag('/users/:user_id/wants', method: :post) do %>
+        <h3>
+          「やりたいこと」を思う存分入力してみよう！！
+        </h3>
+        <input placeholder="Title" type="text" name="title">
+        <input placeholder="Rate" type="text" name="rate">
+        <textarea cols="30" name="text" placeholder="Text" rows="10"></textarea>
+        <input type="submit" value="SENT">
+      <% end %>
+    </div>
